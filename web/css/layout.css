@@ -1,0 +1,654 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 5, 2018, 7:29:42 AM
+    Author     : Naqib
+*/
+
+
+
+/* ------------------------------ Layout Index ------------------------------*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+    margin: 0px auto;
+}
+
+hr {
+    border: 0;
+    background-color: #333;
+    height: 1px;
+    margin: 0 25px;
+    width: 300px;
+}
+
+table {
+    margin: 0 20px;
+    border-spacing: 0;
+    text-align: center;
+    border: solid 1px #f5eabe;
+}
+
+/* general styles */
+#main { background: #eee }
+
+.header {
+    background-color: #c3e3e0;
+    height: 30px;
+}
+
+/* styles for elements contained in the header, i.e.,
+   shopping cart widget, language toggle, and logo */
+#header {
+    height: 100px;
+    background: #0510ab;
+}
+
+#logo {
+    height: 90px;
+    width: 90px;
+    float: left;
+    margin-left: 30px;
+    margin-top: -45px;
+}
+
+#logoText {
+    float: left;
+    margin: -40px 0 0 10px;
+    /* font styles apply to text within img alt attribute */
+    font-family: 'American Typewriter', Courier, monospace;
+    font-size: 70px;
+    color: #fff;
+}
+
+#widgetBar {
+    height: 50px;
+    width: 100%;
+    float: right;
+    background: #0510ab;
+}
+
+.headerWidget {
+    width: 194px;
+    margin: 0px 2px;
+    font-size: small;
+    float: right;
+    line-height: 25px;
+    background: #1925d0;
+}
+
+/* footer styles */
+#footer {
+    height: 40px;
+    width: 100%;
+    clear: left;
+    background: #2d52ee;
+}
+
+#indexCenterIndex {
+    height: 2600px;
+    width: 100%;
+    float: left;
+    background: #849bf9;
+}
+
+#bigfontIndex {
+    /* font styles apply to text within img alt attribute */
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 40px;
+    color: #0a1176;
+}
+
+#normalfontIndex {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    color: #131b90;
+}
+
+#categoryfontIndex {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 50px;
+    color: #0a0f5e;
+}
+
+#categoryfonthamster {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 45px;
+    color: #0a0f5e;
+}
+
+#categoryBoxIndex {
+    height: 500px;
+    width: 1000px;
+    margin: 50px 175px 15px;
+    background: #9daff9;
+}
+
+#imagecategoryleftIndex {
+    height: 445px;
+    width: 700px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#imagecategoryrightIndex {
+    height: 445px;
+    width: 700px;
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+#logocategoryIndex {
+    height: 100px;
+    width: 100px;
+    margin-left: 0px;
+    margin-top: -45px;
+}
+
+.buttonDesignIndex {
+    background-color: #2f58e7;
+    border: none;
+    color: white;
+    padding: 15px 42px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* ------------------------------ Layout Index ------------------------------*/
+
+
+/* ------------------------------- Layout Cart ------------------------------*/
+
+
+/* html tags */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+    margin: 0px auto;
+}
+
+hr {
+    border: 0;
+    background-color: #333;
+    height: 1px;
+    margin: 0 25px;
+    width: 300px;
+}
+
+table {
+    margin: 0 20px;
+    border-spacing: 0;
+    text-align: center;
+    border: solid 1px #f5eabe;
+}
+
+.lightBlueCart { background-color: #cad6ff }
+
+.whiteCart { background-color: #d6defb }
+
+.bubbleCart {
+    font-weight: bold;
+    background-color: #5175f0;
+    padding: 15px;
+    color: inherit;
+}
+
+.hMarginCart { margin: 0 30px }
+
+
+.headerCart {
+    background-color: #c3e3e0;
+    height: 30px;
+}
+
+
+#indexCenterCart {
+    height: 680px;
+    width: 100%;
+    float: left;
+    background: #849bf9;
+}
+
+#normalfontCart {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    color: #131b90;
+}
+
+
+#categoryBoxCenterCart {
+    height: 500px;
+    width: 1290px;
+    margin: 50px 30px 15px;
+    background: #9daff9;
+}
+
+
+
+.buttonDesignCart {
+    background-color: #5175f0;
+    border: none;
+    color: #fff;
+    padding: 12px 42px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+/* cart page styles */
+#actionBarCart {
+    width: 100%;
+    text-align: center;
+}
+
+#subtotalCart { margin: 40px 0 20px 430px }
+
+#cartTableCart { width: 1248px; }
+
+#cartTableCart td {
+    width: 145px;
+    height: 110px;
+}
+
+.smallTextCart { font-size: small }
+
+.inputField { 
+    width: 190px;
+    margin-left: 30px;
+}
+
+/* ------------------------------- Layout Cart ------------------------------*/
+
+/* ----------------------------- Layout Category -----------------------------*/
+
+
+
+table {
+    margin: 0 20px;
+    border-spacing: 0;
+    text-align: center;
+    border: solid 1px #f5eabe;
+}
+
+
+.lightBlueCategory { background-color: #cad6ff }
+
+.whiteCategory { background-color: #d6defb }
+
+
+.smallTextCategory { font-size: small }
+
+/* index page styles */
+#indexLeftColumnCategory {
+    height: 850px;
+    width: 20%;
+    float: left;
+    background: #6582f9;
+}
+
+#indexRightColumnCategory {
+    height: 850px;
+    width: 80%;
+    float: left;
+    background: #849bf9;
+}
+
+#bigfontCategory {
+    /* font styles apply to text within img alt attribute */
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 40px;
+    color: #0a1176;
+}
+
+#normalfontCategory {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    color: #131b90;
+}
+
+
+
+#categoryBoxLeftCategory {
+    height: 500px;
+    width: 212px;
+    margin: 300px 27px 15px;
+    background: #9daff9;
+}
+
+
+#categoryBoxRightCategory {
+    height: 500px;
+    width: 1023px;
+    margin: 50px 30px 15px;
+    background: #9daff9;
+}
+
+
+.buttonDesignCategory {
+    background-color: #5175f0;
+    border: none;
+    color: #fff;
+    padding: 15px 42px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.categoryButtonCategory {
+    margin: 25px 22px;
+    padding: 13px;
+    display: block;
+    position: relative;
+    top: 70px;
+    background-color: #2f58e7;
+}
+
+#selectedCategoryCategory {
+    background-color: #0536e3;
+    position: relative;
+    left: 1px;
+    top: 70px;
+    width: 139px;
+}
+
+#categoryTitleCategory {
+    margin: -34px 180px 0 0;
+    font-size: x-large;
+    float: right;
+    background-color: #abbbfb;
+    padding: 7px;
+}
+
+#categoryTitleTextCategory {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 30px;
+    color: #131b90;
+    position: relative;
+    top: 40px;
+}
+
+.categoryTextCategory {
+    line-height: 25px;
+    color: #fff;
+    font-size: x-large;
+}
+
+#productTableCategory { 
+    width: 982px;
+    position: relative;
+    top: 15px;
+}
+
+#productTableCategory tr { 
+    height: 113px;
+}
+
+#productTableCategory td { 
+    width: 145px;
+}
+
+.indent { margin-left: 6em }
+
+/* ----------------------------- Layout Category -----------------------------*/
+
+/* ----------------------------- Layout Checkout -----------------------------*/
+
+
+table {
+    margin: 0 20px;
+    border-spacing: 0;
+    text-align: center;
+    border: solid 1px #f5eabe;
+}
+ 
+
+#indexTopColumnCheckout {
+    height: 50px;
+    width: 100%;
+    float: left;
+    background: #6582f9;
+}
+
+/* index page styles */
+#indexLeftColumnCheckout {
+    height: 630px;
+    width: 50%;
+    float: left;
+    background: #6582f9;
+}
+
+#indexRightColumnCheckout {
+    height: 630px;
+    width: 50%;
+    float: left;
+    background: #6582f9;
+}
+
+#normalfontCheckout {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    float: left;
+    padding-left: 27px;
+    color: #131b90;
+}
+
+#categoryBoxLeftCheckout {
+    height: 500px;
+    width: 620px;
+    margin: 50px 27px 15px;
+    background: #9daff9;
+}
+
+#categoryBoxRightCheckout {
+    height: 500px;
+    width: 620px;
+    margin: 50px 30px 15px;
+    background: #9daff9;
+}
+
+.buttonDesignCheckout {
+    background-color: #4168ee;
+    border: none;
+    color: #fff;
+    padding: 15px 42px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* checkout page styles */
+#checkoutTableCheckout {
+    width: 620px;
+    height: 500px;
+    background-color: #bfcaf9;
+    float: left;
+    margin-top: 55px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+#poscodeCheckout {
+    margin-left: 20px;
+    padding-right: 100px;
+}
+
+#infoBoxCheckout {
+    width: 558px;
+    padding-left: 30px;
+    margin-top: 55px;
+    float: left;
+}
+
+#priceBoxCheckout {
+    padding: 10px;
+    margin: 20px 0;
+    height: 185px;
+    width: 558px;
+    background-color: #c3e3e0;
+}
+
+.checkoutPriceColumn {
+    width: 80px;
+    font-weight: bold;
+}
+
+.total { border-top: 1px solid #444 }
+
+.horizontalMargin {
+    margin-left: 28px;
+    margin-right: 5px
+}
+
+.error {
+    font-size: smaller;
+    line-height: 20px;
+    font-style: italic;
+    background: #6582f9;
+}
+
+/* ----------------------------- Layout Checkout -----------------------------*/
+
+
+/* --------------------------- Layout Confirmation ---------------------------*/
+
+table {
+    margin: 0 20px;
+    border-spacing: 0;
+    text-align: center;
+    border: solid 1px #f5eabe;
+}
+
+.headerConfirmation {
+    background-color: #99c3bf;
+    height: 30px;
+}
+
+/* styles or elements contained in the header, i.e.,
+   shopping cart widget, language toggle, and logo */
+#headerConfirmation {
+    height: 100px;
+    background: #0510ab;
+}
+
+#indexTopColumnConfirmation {
+    height: 155px;
+    width: 100%;
+    float: left;
+    background: #6582f9;
+}
+
+/* index page styles */
+#indexLeftColumnConfirmation {
+    height: 630px;
+    width: 50%;
+    float: left;
+    background: #6582f9;
+}
+
+#indexRightColumnConfirmation {
+    height: 630px;
+    width: 50%;
+    float: left;
+    background: #6582f9;
+}
+
+#bigfontConfirmation {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 27px;
+    color: #131b90;
+}
+
+#normalfontConfirmation {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding-left: 27px;
+    color: #131b90;
+}
+
+#categoryBoxLeftConfirmation {
+    height: 500px;
+    width: 620px;
+    text-align: left;
+    margin: 50px 27px 15px;
+    background: #9daff9;
+}
+
+#categoryBoxRightConfirmation {
+    height: 500px;
+    width: 620px;
+    text-align: left;
+    margin: 50px 30px 15px;
+    background: #9daff9;
+}
+
+.detailsTable { text-align: left }
+
+.detailsTable th { padding: 5px 10px }
+
+.detailsTable td {
+    padding: 5px 10px 5px 20px;
+    font-size: small;
+    font-family: "Courier New", courier, monospace;
+}
+
+#orderSummaryTable { width: 100% }
+
+.tableHeading {
+    font-weight: bold;
+    background-color: #addfda;
+    text-align: center;
+}
+
+.lightBlueConfirmation { background-color: #cad6ff }
+
+.whiteConfirmation { background-color: #d6defb }
+
+.quantityColumn {
+    text-align: center;
+    width: 50%;
+}
+
+.confirmationPriceColumn {
+    width: 50%;
+    font-weight: normal;
+}
+
+#deliverySurchargeCellLeft {
+    text-align: right;
+    padding: 0;
+}
+
+#deliverySurchargeCellRight { padding: 0 20px }
+
+#totalCellLeft {
+    text-align: right;
+    padding: 0;
+}
+
+#totalCellRight { padding: 0 20px }
+
+#dateProcessedRow { padding: 2px 0 10px 20px }
+
+/* --------------------------- Layout Confirmation ---------------------------*/
