@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
     <context-param>
         <description>The relative path to product images</description>
         <param-name>productImagePath</param-name>
@@ -23,12 +26,20 @@
         <session-timeout>10</session-timeout>
     </session-config>
     <jsp-config>
+        
         <jsp-property-group>
             <description>header and footer settings</description>
             <url-pattern>/index.jsp</url-pattern>
             <url-pattern>/WEB-INF/view/*</url-pattern>
             <include-prelude>/WEB-INF/jspf/header.jspf</include-prelude>
             <include-coda>/WEB-INF/jspf/footer.jspf</include-coda>
+        </jsp-property-group>
+        
+        <jsp-property-group>
+            <description>admin console</description>
+            <url-pattern>/admin/index.jsp</url-pattern>
+            <include-prelude>/admin/jspf/header.jspf</include-prelude>
+            <include-coda>/admin/jspf/footer.jspf</include-coda>
         </jsp-property-group>
     </jsp-config>
     <!--  The entry was required for the <sql> tags in order to identify the data source registered on the server. 

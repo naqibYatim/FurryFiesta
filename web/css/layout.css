@@ -76,6 +76,7 @@ table {
     width: 194px;
     margin: 0px 2px;
     font-size: small;
+    color: white;
     float: right;
     line-height: 25px;
     background: #1925d0;
@@ -652,3 +653,68 @@ table {
 #dateProcessedRow { padding: 2px 0 10px 20px }
 
 /* --------------------------- Layout Confirmation ---------------------------*/
+
+
+/* ------------------------------ Layout Admin -------------------------------*/
+#adminLogo {
+    float:left;
+    margin-left: 30px;
+    margin-top: -20px;
+}
+
+#categoryTitleAdmin {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 30px;
+    color: #131b90;
+}
+
+#linkPageAdmin {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 15px;
+    color: #6066bd;
+}
+
+#loginBox {
+    width: 300px;
+    margin: 0 auto;
+    border: solid 1px #f5eabe;
+    background-color: #f5eabe;
+    border-radius: 4px;
+}
+
+#adminMenu {
+    float: left;
+    width: 180px;
+    height: 400px;
+    margin: 25px 5px 30px 30px;
+    border: solid 1px #b2b7f9;
+    background-color: #bec2f5;
+    border-radius: 4px;
+}
+
+#adminMenu p { margin-left: 15px }
+
+#adminTable {
+    width: 1000px;
+    margin-bottom: 10px;
+    float: left;
+    background-color: #edf8f7;
+}
+
+.alignLeft { text-align: left }
+
+.selectedRow {
+    background-color: #c3e3e0;
+    cursor: pointer;
+}
+
+.noDecoration { text-decoration: none }
+
+.rigidWidth { width:200px }
+
+.embedded {
+    margin: 0;
+    border: none;
+}
+
+/* ------------------------------ Layout Admin -------------------------------*/

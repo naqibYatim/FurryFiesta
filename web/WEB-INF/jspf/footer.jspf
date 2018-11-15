@@ -2,7 +2,7 @@
 <%@ page pageEncoding="UTF-8" %>
         
             <div id="footer">
-                footer
+                <p align="center">Furry Fiesta</p>
             </div>
         </div>
         

@@ -42,10 +42,10 @@
             <div id="indexTopColumnCheckout">
                 <p id="normalfontCheckout" align="center"><fmt:message key='checkout'/></p>
             </div>
-            
-            <%-- <c:if test="${!empty orderFailureFlag}">
-                <p class="error" style="background-color: #6582f9;">We were unable to process your order. Please try again!</p>
-            </c:if>--%>
+            <!-- **************** this shit needed to be check ********************************************************************************** -->
+            <!--<c:if test="${!empty orderFailureFlag}">
+                <p class="error" style="background-color: #6582f9;"><fmt:message key="orderFailureError"/></p>
+            </c:if>-->
 
             <div id="indexLeftColumnCheckout">
                 

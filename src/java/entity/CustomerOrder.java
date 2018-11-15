@@ -24,6 +24,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -34,13 +35,12 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "customer_order")
-@XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "CustomerOrder.findAll", query = "SELECT c FROM CustomerOrder c")
-    , @NamedQuery(name = "CustomerOrder.findById", query = "SELECT c FROM CustomerOrder c WHERE c.id = :id")
-    , @NamedQuery(name = "CustomerOrder.findByAmount", query = "SELECT c FROM CustomerOrder c WHERE c.amount = :amount")
-    , @NamedQuery(name = "CustomerOrder.findByDateCreated", query = "SELECT c FROM CustomerOrder c WHERE c.dateCreated = :dateCreated")
-    , @NamedQuery(name = "CustomerOrder.findByConfirmationNumber", query = "SELECT c FROM CustomerOrder c WHERE c.confirmationNumber = :confirmationNumber")})
+    @NamedQuery(name = "CustomerOrder.findAll", query = "SELECT c FROM CustomerOrder c"), 
+    @NamedQuery(name = "CustomerOrder.findById", query = "SELECT c FROM CustomerOrder c WHERE c.id = :id"), 
+    @NamedQuery(name = "CustomerOrder.findByAmount", query = "SELECT c FROM CustomerOrder c WHERE c.amount = :amount"), 
+    @NamedQuery(name = "CustomerOrder.findByDateCreated", query = "SELECT c FROM CustomerOrder c WHERE c.dateCreated = :dateCreated"), 
+    @NamedQuery(name = "CustomerOrder.findByConfirmationNumber", query = "SELECT c FROM CustomerOrder c WHERE c.confirmationNumber = :confirmationNumber")})
 public class CustomerOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -49,25 +49,21 @@ public class CustomerOrder implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Basic(optional = false)
-    @NotNull
     @Column(name = "amount")
     private BigDecimal amount;
     @Basic(optional = false)
-    @NotNull
     @Column(name = "date_created")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateCreated;
     @Basic(optional = false)
-    @NotNull
     @Column(name = "confirmation_number")
     private int confirmationNumber;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customerOrder")
+    private Collection<OrderedProduct> orderedProductCollection;
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Customer customer;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customerOrder")
-    private Collection<OrderedProduct> orderedProductCollection;
 
     public CustomerOrder() {
     }
@@ -154,7 +150,7 @@ public class CustomerOrder implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.CustomerOrder[ id=" + id + " ]";
+        return "entity.CustomerOrder[id=" + id + "]";
     }
     
 }

@@ -117,7 +117,10 @@
                                       requestScope['javax.servlet.forward.servlet_path'] ne '/checkout' &&
 
                                       !fn:contains(pageContext.request.servletPath,'/cart') &&
-                                      requestScope['javax.servlet.forward.servlet_path'] ne '/cart'}">
+                                      requestScope['javax.servlet.forward.servlet_path'] ne '/cart' &&
+
+                                  validationErrorFlag ne true &&
+                                  orderFailureFlag ne true}">
                         
                         <a href='checkout' style="color: white;">proceed to checkout &#x279f;</a>
                         

@@ -50,18 +50,17 @@ public class OrderManager {
     
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public int placeOrder(String name, String email, String phone, String address, String cityRegion, String ccNumber, ShoppingCart cart) {
-        int orderid;
+        
         try {
             Customer customer = addCustomer(name, email, phone, address, cityRegion, ccNumber);
             CustomerOrder order = addOrder(customer, cart);
             addOrderedItems(order, cart);
-            orderid = order.getId();
+            return order.getId();
         } catch (Exception e) {
             context.setRollbackOnly();
-            orderid = 0;
+            return 0;
         }
         
-        return orderid;
     }
 
     // Add business logic below. (Right-click in editor and choose

@@ -1,0 +1,44 @@
+
+
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/layout.css">
+
+        <script src="../js/jquery-1.4.2.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('tr.tableRow').hover(
+                    function () {
+                        $(this).addClass('selectedRow');
+                    },
+                    function () {
+                        $(this).removeClass('selectedRow');
+                    }
+                );
+             });
+        </script>
+
+        <title>The Furry Fiesta :: Admin Console</title>
+    </head>
+
+    <body background="#4b65d2">
+        <div id="main">
+            <div id="header">
+                <div id="widgetBar"></div>
+
+                <a href="../index.jsp">
+                    <img src="../image/logo.png" id="logo" alt="Furry Fiesta logo">
+                </a>
+
+                <a href="../index.jsp"><p id="logoText">Furry Fiesta</p></a>
+            </div>
+
+            <p id='categoryTitleAdmin'>admin console</p>
