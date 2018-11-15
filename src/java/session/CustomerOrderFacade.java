@@ -18,10 +18,10 @@ import javax.persistence.PersistenceContext;
 public class CustomerOrderFacade extends AbstractFacade<CustomerOrder> {
 
     @PersistenceContext(unitName = "FurryFiestaNaqibAfiqPU")
-    private EntityManager em;
+    public EntityManager em;
 
     @Override
-    protected EntityManager getEntityManager() {
+    public EntityManager getEntityManager() {
         return em;
     }
 

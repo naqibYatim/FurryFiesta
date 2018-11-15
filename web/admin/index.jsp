@@ -25,14 +25,14 @@
 
         <c:forEach var="customer" items="${customerList}" varStatus="iter">
 
-            <tr class="${((iter.index % 2) == 1) ? 'lightBlue' : 'white'} tableRow"
-                onclick="document.location.href='customerRecord?${customer.id}'">
+            <!-- onclick="document.location.href='customerRecord?${customer.id}'" -->
+            <tr class="${((iter.index % 2) == 1) ? 'lightBlue' : 'white'} tableRow">
 
               <%-- Below anchor tags are provided in case JavaScript is disabled --%>
-                <td><a href="customerRecord?${customer.id}" class="noDecoration">${customer.id}</a></td>
-                <td><a href="customerRecord?${customer.id}" class="noDecoration">${customer.name}</a></td>
-                <td><a href="customerRecord?${customer.id}" class="noDecoration">${customer.email}</a></td>
-                <td><a href="customerRecord?${customer.id}" class="noDecoration">${customer.phone}</a></td>
+                <td>${customer.id}</td>
+                <td>${customer.name}</td>
+                <td>${customer.email}</td>
+                <td>${customer.phone}</td>
             </tr>
 
         </c:forEach>
@@ -59,22 +59,22 @@
 
         <c:forEach var="order" items="${orderList}" varStatus="iter">
 
-            <tr class="${((iter.index % 2) == 1) ? 'lightBlue' : 'white'} tableRow"
-                onclick="document.location.href='orderRecord?${order.id}'">
+            <!-- onclick="document.location.href='orderRecord?${order.id}'" -->
+            <tr class="${((iter.index % 2) == 1) ? 'lightBlue' : 'white'} tableRow">
 
               <%-- Below anchor tags are provided in case JavaScript is disabled --%>
-                <td><a href="orderRecord?${order.id}" class="noDecoration">${order.id}</a></td>
-                <td><a href="orderRecord?${order.id}" class="noDecoration">${order.confirmationNumber}</a></td>
-                <td><a href="orderRecord?${order.id}" class="noDecoration">
+                <td>${order.id}</a></td>
+                <td>${order.confirmationNumber}</td>
+                <td>
                         <fmt:formatNumber type="currency"
                                           currencySymbol="RM "
-                                          value="${order.amount}"/></a></td>
+                                          value="${order.amount}"/></td>
 
-                <td><a href="orderRecord?${order.id}" class="noDecoration">
+                <td>
                         <fmt:formatDate value="${order.dateCreated}"
                                         type="both"
                                         dateStyle="short"
-                                        timeStyle="short"/></a></td>
+                                        timeStyle="short"/></td>
             </tr>
 
         </c:forEach>

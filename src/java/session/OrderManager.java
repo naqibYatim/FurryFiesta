@@ -38,15 +38,15 @@ import javax.persistence.PersistenceContext;
 public class OrderManager {
 
     @PersistenceContext(unitName = "FurryFiestaNaqibAfiqPU")
-    private EntityManager em;
+    public EntityManager em;
     @Resource
-    private SessionContext context;
+    public SessionContext context;
     @EJB
-    private ProductFacade productFacade;
+    public ProductFacade productFacade;
     @EJB
-    private CustomerOrderFacade customerOrderFacade;
+    public CustomerOrderFacade customerOrderFacade;
     @EJB
-    private OrderedProductFacade orderedProductFacade;
+    public OrderedProductFacade orderedProductFacade;
     
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public int placeOrder(String name, String email, String phone, String address, String cityRegion, String ccNumber, ShoppingCart cart) {
@@ -55,6 +55,7 @@ public class OrderManager {
             Customer customer = addCustomer(name, email, phone, address, cityRegion, ccNumber);
             CustomerOrder order = addOrder(customer, cart);
             addOrderedItems(order, cart);
+            //int x = order.getId();
             return order.getId();
         } catch (Exception e) {
             context.setRollbackOnly();
@@ -66,7 +67,7 @@ public class OrderManager {
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
 
-    private Customer addCustomer(String name, String email, String phone, String address, String cityRegion, String ccNumber) {
+    public Customer addCustomer(String name, String email, String phone, String address, String cityRegion, String ccNumber) {
         
         Customer customer = new Customer();
         customer.setName(name);
@@ -81,7 +82,7 @@ public class OrderManager {
         
     }
 
-    private CustomerOrder addOrder(Customer customer, ShoppingCart cart) {
+    public CustomerOrder addOrder(Customer customer, ShoppingCart cart) {
         
         // set up customer order
         CustomerOrder order = new CustomerOrder();
@@ -98,7 +99,7 @@ public class OrderManager {
         
     }
 
-    private void addOrderedItems(CustomerOrder order, ShoppingCart cart) {
+    public void addOrderedItems(CustomerOrder order, ShoppingCart cart) {
         
         em.flush();
         

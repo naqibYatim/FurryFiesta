@@ -8,15 +8,15 @@
             <div id="indexTopColumnConfirmation">
                 
                 <p id="bigfontConfirmation">
-                    Thank you for purchasing our product. We will deliver your item within three days
+                    <fmt:message key='introText1confirm'/>
                 </p>
                 <p id="normalfontConfirmation">
-                    Please keep a note of your confirmation number:
+                    <fmt:message key='introText2confirm'/>
                     <strong>${orderRecord.confirmationNumber}</strong>
                     <br>
-                    If you have a query concerning your order, feel free to <a href="#">contact us</a>.
+                    <fmt:message key='introText3confirm'/>
                     <br><br>
-                    Thank you for shopping at the Furry Fiesta Pet Food Shop!
+                    <fmt:message key='introText5confirm'/>
                 </p>
                 
             </div>
@@ -32,13 +32,13 @@
                 
                 <table id="categoryBoxLeftConfirmation" class="detailsTable">
                     <tr class="headerConfirmation">
-                        <th style="padding:10px" colspan="3">ORDER SUMMARY</th>
+                        <th style="padding:10px" colspan="3"><fmt:message key='tableTextsummaryconfirm'/></th>
                     </tr>
 
                     <tr class="tableHeading">
-                        <td>product</td>
-                        <td>quantity</td>
-                        <td>price</td>
+                        <td><fmt:message key='tableTextproductconfirm'/></td>
+                        <td><fmt:message key='tableTextquantityconfirm'/></td>
+                        <td><fmt:message key='tableTextpriceconfirm'/></td>
                     </tr>
 
                     <c:forEach var="orderedProduct" items="${orderedProducts}" varStatus="iter">
@@ -58,7 +58,7 @@
                     <tr class="lightBlueConfirmation"><td colspan="3" style="padding: 0 20px"><hr></td></tr>
 
                     <tr class="lightBlueConfirmation">
-                        <td colspan="2" id="deliverySurchargeCellLeft"><strong>delivery surcharge:</strong></td>
+                        <td colspan="2" id="deliverySurchargeCellLeft"><strong><fmt:message key='tableTextsurchargeconfirm'/></strong></td>
                         <td id="deliverySurchargeCellRight">RM ${initParam.deliverySurcharge}</td>
                     </tr>
 
@@ -70,7 +70,7 @@
                     <tr class="lightBlueConfirmation"><td colspan="3" style="padding: 0 20px"><hr></td></tr>
 
                     <tr class="lightBlueConfirmation">
-                        <td colspan="3" id="dateProcessedRow"><strong>date processed:</strong>
+                        <td colspan="3" id="dateProcessedRow"><strong><fmt:message key='tableTextdateconfirm'/></strong>
                             ${orderRecord.dateCreated}
                         </td>
                     </tr>
@@ -85,7 +85,7 @@
                 <table id="categoryBoxRightConfirmation" class="detailsTable" >
                     
                     <tr class="headerConfirmation">
-                        <th style="padding:10px" colspan="3">DELIVERY ADDRESS</th>
+                        <th style="padding:10px" colspan="3"><fmt:message key='tableTextaddressconfirm'/></th>
                     </tr>
                     
                     <tr>
@@ -101,10 +101,10 @@
                             <br>
                             <hr>
                             <br>
-                            <strong>email:</strong> ${customer.email}
+                            <strong><fmt:message key='tableTextemailconfirm'/></strong> ${customer.email}
                             <br>
                             <br>
-                            <strong>phone:</strong> ${customer.phone}
+                            <strong><fmt:message key='tableTextphoneconfirm'/></strong> ${customer.phone}
                         </td>
                     </tr>
                     

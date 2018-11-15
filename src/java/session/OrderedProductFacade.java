@@ -19,10 +19,10 @@ import javax.persistence.PersistenceContext;
 public class OrderedProductFacade extends AbstractFacade<OrderedProduct> {
 
     @PersistenceContext(unitName = "FurryFiestaNaqibAfiqPU")
-    private EntityManager em;
+    public EntityManager em;
 
     @Override
-    protected EntityManager getEntityManager() {
+    public EntityManager getEntityManager() {
         return em;
     }
 
@@ -30,7 +30,7 @@ public class OrderedProductFacade extends AbstractFacade<OrderedProduct> {
         super(OrderedProduct.class);
     }
 
-    List<OrderedProduct> findByOrderId(Object id) {
+    public List<OrderedProduct> findByOrderId(Object id) {
         return em.createNamedQuery("OrderedProduct.findByCustomerOrderId").setParameter("customerOrderId", id).getResultList();
     }
     
