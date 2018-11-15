@@ -17,6 +17,7 @@
         users view the same page when switching between English and Czech. --%>
    <c:set var='view' value='/index' scope='session' />
    
+   
             <div id="indexCenterIndex">
                 
                 <p id="bigfontIndex"><fmt:message key='greeting'/></p>
